@@ -6,3 +6,6 @@ run:
 
 dev:
 	deno run --allow-net --allow-env main.ts
+
+load-test:
+	wrk -t12 -c400 -d30s http://localhost:9000/todo
